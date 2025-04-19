@@ -74,13 +74,9 @@ public class Main {
                                 .get()
                                 .getRecommendedHashtags();
                                 
-                        List<String> captions = processors.stream()
-                                .filter(p -> p.getProfileName().equals(targetProfile))
-                                .findFirst()
-                                .get()
-                                .getRecommendedCaptions();
+                       
                                 
-                        Dashboard.displayRecommendations(targetProfile, hashtags, captions);
+                        Dashboard.displayRecommendations(targetProfile, hashtags, null);
                     } else {
                         System.out.println("Profile not found: " + targetProfile);
                     }

@@ -83,7 +83,6 @@ public class Dashboard {
         System.out.println("\n=== Recommendations for " + profileName + " ===");
         System.out.println("\nTop Hashtags:");
         hashtags.forEach(hashtag -> System.out.println("  " + hashtag));
-        System.out.println("\nCaption Ideas:");
-        captions.forEach(caption -> System.out.println("  \"" + caption + "\""));
+       
     }
 }
