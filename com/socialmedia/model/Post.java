@@ -49,6 +49,23 @@ public class Post {
     public ContentType getContentType() { return contentType; }
     public List<String> getCommentTexts() { return commentTexts; }
 
+    // Nested static class for post metadata
+    public static class PostMetaData {
+        private int wordCount;
+        private int hashtagCount;
+
+        public PostMetaData(int wordCount, int hashtagCount) {
+            this.wordCount = wordCount;
+            this.hashtagCount = hashtagCount;
+        }
+
+        public void displayMetaData() {
+            System.out.println("Word Count: " + wordCount);
+            System.out.println("Hashtag Count: " + hashtagCount);
+        }
+    }
+
+    // Enum for content type
     public static enum ContentType {
         PHOTO, VIDEO, REEL, TEXT
     }
